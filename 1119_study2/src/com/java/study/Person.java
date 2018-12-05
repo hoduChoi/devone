@@ -35,6 +35,36 @@ public class Person implements Serializable{
 	@Override
 	public String toString() {
 		return String.format("Person{name='%s', gender='%c'}", name, gender);
+	}
+
+	//주소 자체를 비교하는 메서드. Collection API 알아야 함.
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + gender;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+	
+	//주로 자주 사용. 비교 메서드. 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Person other = (Person) obj;
+		if (gender != other.gender)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
 	};
 	
 	

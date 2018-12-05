@@ -22,5 +22,31 @@ public class Student extends Person{
 	public String toString() {
 		return super.toString()+" 학번: " + studentNumber;
 	}//toString
+
+//	@Override
+//	public int hashCode() {
+//		final int prime = 31;
+//		int result = super.hashCode();
+//		result = prime * result + ((studentNumber == null) ? 0 : studentNumber.hashCode());
+//		return result;
+//	}
+//
+//	@Override
+//	public boolean equals(Object obj) {
+//		if (this == obj)
+//			return true;
+//		if (!super.equals(obj))
+//			return false;
+//		if (getClass() != obj.getClass())
+//			return false;
+//		Student other = (Student) obj;
+//		if (studentNumber == null) {
+//			if (other.studentNumber != null)
+//				return false;
+//		} else if (!studentNumber.equals(other.studentNumber))
+//			return false;
+//		return true;
+//	}
+	
 	
 }

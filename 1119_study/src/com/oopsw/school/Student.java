@@ -22,7 +22,7 @@ public class Student extends Person{ //0.
 	
 	//5.상속 후 부모의 멤버 메소드 중에서 구현부를 수정 -Overriding
 	@Override
-	public void printAll() {
+	public final void printAll() {
 		//override 하지 않으면 학번만 출력됨.
 		System.out.println("학번: "+studentNumber);
 		super.printAll(); //부모의 메소드 호출.

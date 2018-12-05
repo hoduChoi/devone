@@ -4,6 +4,7 @@ public class Student extends Person {
 	private String studentNumber;
 	private String pw; 
 	
+	public Student() {}
 	public Student(String studentNumber, String pw) {
 		// TODO Auto-generated constructor stub
 		this.studentNumber = studentNumber;
